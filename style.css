@@ -73,6 +73,8 @@ h2 {
 
 .project-card h3 { color: #ffffff; margin-bottom: 10px; }
 
+.project-card h4 { color: #ffffff; margin-bottom: 10px; }
+
 /* 버튼 스타일 */
 .btn {
     display: inline-block;

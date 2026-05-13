@@ -1,0 +1,51 @@
+@tailwind utilities;
+
+@import "tailwindcss";
+
+/* Home 설정 */
+/* 색상이 흐르는 애니메이션 정의 */
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+    /* 배경 사이즈를 넓게 잡아야 흐르는 효과가 잘 보여요 */
+    background-size: 200% auto;
+    animation: gradient-flow 4s linear infinite;
+}
+
+/* 유리글씨 */
+@keyframes jelly-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.text-jelly-bubble {
+    /* 1. 글자 안쪽을 뽀얀 화이트로 채워서 가독성 확보 (가장 중요!) */
+    background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(230, 235, 255, 0.9) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    /* 2. 텍스트 테두리: 글자가 배경과 섞이지 않도록 선명하게 잡아줌 */
+    -webkit-text-stroke: 1px rgba(100, 150, 255, 0.3);
+
+    /* 3. 다중 그림자: 글자를 배경에서 '똑' 떼어내기
+       - 첫 번째 그림자는 글자 바로 뒤에 어둡게 깔아 선명도를 높입니다.
+       - 두 번째는 부드럽게 퍼트려 입체감을 줍니다.
+    */
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3))
+    drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.15));
+
+    /* 4. 입체감 광택 (text-shadow) */
+    text-shadow:
+            0px 3px 2px rgba(255, 255, 255, 1), /* 상단 하이라이트 */
+            0px -1px 2px rgba(0, 0, 0, 0.1);
+}

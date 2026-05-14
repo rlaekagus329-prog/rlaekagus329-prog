@@ -9,7 +9,7 @@ export const projectData = [
         description: `LLM과 감정 분석 딥러닝 기반의 멀티테넌트 AI 오케스트레이션 시스템입니다. 사용자가 직접 RAG 데이터를 입력하여 나만의 맞춤형 AI 비서를 생성하고, 복잡한 기업 지배구조와 재무 지표를 분석하여 리포트를 생성하는 웹 서비스를 구축했습니다.
         
                        [트러블 슈팅:할루시네이션 제어]
-                        할루시네이션 문제를 제어하기 위해 문맥 중심의 2단계 정밀 청킹과 핵심 조각 압축 검색 파이프라인을 구축하고(2-Stage Retrieval), 출처 표기와 근거 기반 프롬프트 제약을 통합하여 기업 리포트 답변의 신뢰도를 극대화했습니다.`,
+                        할루시네이션 문제를 제어하기 위해 LlamaParse를 통한 정교한 마크다운 추출과 2단계 계층형 텍스트 분할(Header + Recursive 오버랩)로 컨텍스트의 누락을 방지하고, 메타데이터 필터링(company_id) 기반의 엄격한 문서 격리와 키워드 집중·추론을 강제하는 프롬프트 지침을 결합하여 답변의 신뢰도를 극대화했습니다.`,
         tags: ["React", "Flask", "Java","RESTful API", "PGVector", "Ollama", "HuggingFace", "LLM", "LangChain", "LlamaParse","BERT","PostgreSQL","pgvector","Gradle"],
         color: "from-blue-600 to-cyan-400",
         videoUrl: "https://www.youtube.com/embed/wbfH_BSXGb4",
